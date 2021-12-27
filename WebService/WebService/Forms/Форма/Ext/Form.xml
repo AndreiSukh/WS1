@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Дата" id="25">
+			<DataPath>Дата</DataPath>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<Button name="ВыгрузкаВалют" id="1">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ВыгрузкаВалют</CommandName>
+			<ExtendedTooltip name="ВыгрузкаВалютРасширеннаяПодсказка" id="2"/>
+		</Button>
+		<Table name="КурсыВалют" id="3">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>КурсыВалют</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КурсыВалютКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="КурсыВалютКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КурсыВалютРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="КурсыВалютСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>КурсыВалют</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КурсыВалютСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="КурсыВалютСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КурсыВалютСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>КурсыВалют</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КурсыВалютСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="КурсыВалютСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КурсыВалютУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>КурсыВалют</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КурсыВалютУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="КурсыВалютУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="КурсыВалютИмя" id="16">
+					<DataPath>КурсыВалют.Имя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КурсыВалютИмяКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КурсыВалютИмяРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="КурсыВалютНоминал" id="19">
+					<DataPath>КурсыВалют.Номинал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КурсыВалютНоминалКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КурсыВалютНоминалРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="КурсыВалютКурс" id="22">
+					<DataPath>КурсыВалют.Курс</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КурсыВалютКурсКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КурсыВалютКурсРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.WebСервисы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КурсыВалют" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Курсы валют</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номинал" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номинал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Курс" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Курс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Дата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыгрузкаВалют" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка валют</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка валют</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузкаВалют</Action>
+		</Command>
+	</Commands>
+</Form>
